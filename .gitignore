@@ -19,3 +19,4 @@ dist/
 # Optional: Exclude Photoshop or other design app autosaves
 *.psd
 *.xcf
+
