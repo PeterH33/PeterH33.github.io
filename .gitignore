@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+
+# Thumbnails / temp image cache
+Thumbs.db
+ehthumbs.db
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# Node/npm (if you add a build process later)
+node_modules/
+dist/
+
+# Logs and system junk
+*.log
+
+# Optional: Exclude Photoshop or other design app autosaves
+*.psd
+*.xcf
