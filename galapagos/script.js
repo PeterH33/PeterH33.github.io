@@ -6,7 +6,7 @@ const closeBtn = document.getElementById('modal-close');
 
 async function loadGallery() {
   try {
-    const descRes = await fetch('descriptions.txt');
+    const descRes = await fetch('galapagos/descriptions.txt');
     const descText = await descRes.text();
     const descriptions = {};
 
@@ -16,8 +16,9 @@ async function loadGallery() {
     });
 
     const photoList = Object.keys(descriptions);
+
     photoList.forEach(filename => {
-      const imgSrc = `photos/${filename}`;
+      const imgSrc = `galapagos/photos/${filename}`;
       const caption = descriptions[filename];
 
       const item = document.createElement('div');
