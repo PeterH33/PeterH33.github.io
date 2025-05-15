@@ -12,13 +12,27 @@ body {
   }
   
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    column-count: 3;
+    column-gap: 1rem;
     padding: 1rem;
+  }
+
+  @media (max-width: 800px){
+    .gallery{
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 500px){
+    .gallery{
+      column-count: 1;
+    }
   }
   
   .gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
     cursor: pointer;
     border-radius: 0;
     overflow: hidden;
@@ -33,6 +47,7 @@ body {
   
   .gallery-item img {
     width: 100%;
+    height: auto;
     display: block;
   }
   
