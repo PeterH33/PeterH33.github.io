@@ -42,7 +42,6 @@ body {
     transition: transform 0.2s;
   }
   
-
   .gallery-item:hover {
     transform: scale(1.02);
   }
@@ -55,7 +54,7 @@ body {
     transition: opacity 0.5s ease;
   }
   
-  .fade-in {
+  .gallery-item img.fade-in {
     opacity: 1;
   }
 
