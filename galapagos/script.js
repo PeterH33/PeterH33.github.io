@@ -43,6 +43,11 @@ function loadNextBatch() {
     img.alt = item.caption;
     img.loading = "lazy";
 
+    //fade in
+    img.addEventListener("load", () => {
+      img.classList.add("fade-in");
+    });
+
     div.appendChild(img);
 
     div.addEventListener("click", () => {

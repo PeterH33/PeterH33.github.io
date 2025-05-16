@@ -41,7 +41,7 @@ body {
     transition: transform 0.2s;
   }
   
-  
+
   .gallery-item:hover {
     transform: scale(1.02);
   }
@@ -89,4 +89,15 @@ body {
     color: white;
     font-size: 2rem;
     cursor: pointer;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn ease 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
