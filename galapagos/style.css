@@ -41,6 +41,7 @@ body {
     transition: transform 0.2s;
   }
   
+  
   .gallery-item:hover {
     transform: scale(1.02);
   }
