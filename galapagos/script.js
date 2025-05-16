@@ -21,7 +21,7 @@ document.body.appendChild(loadingIndicator);
 
 function openModal(filename, caption) {
   modal.style.display = "block";
-  modalImg.src = `photos/${filename}`;
+  modalImg.src = `galapagos/photos/${filename}`;
   modalCaption.textContent = caption;
 }
 
@@ -39,7 +39,7 @@ function loadNextBatch() {
     div.className = "gallery-item";
 
     const img = document.createElement("img");
-    img.src = `photos/${item.filename}`;
+    img.src = `galapagos/photos/${item.filename}`;
     img.alt = item.caption;
     img.loading = "lazy";
 
