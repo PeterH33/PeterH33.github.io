@@ -67,7 +67,7 @@ function onScroll() {
   }
 }
 
-fetch("descriptions.txt")
+fetch("galapagos/descriptions.txt")
   .then(res => res.text())
   .then(text => {
     allImages = text
