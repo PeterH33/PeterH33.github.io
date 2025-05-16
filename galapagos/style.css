@@ -37,7 +37,8 @@ body {
     border-radius: 0;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: white;
+    background: linear-gradient(135deg, #eee, #ddd); /* Gradient background while loading */
+    position: relative; /* Needed for spinner positioning */
     transition: transform 0.2s;
   }
   
@@ -50,12 +51,37 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0; /* Start invis */
+    transition: opacity 0.5s ease;
   }
   
+  .fade-in {
+    opacity: 1;
+  }
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
   .caption {
     display: none;
   }
   
+
   /* Modal Styles */
   .modal {
     display: none;
@@ -89,15 +115,4 @@ body {
     color: white;
     font-size: 2rem;
     cursor: pointer;
-  }
-
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn ease 1s forwards;
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
   }

@@ -38,14 +38,21 @@ function loadNextBatch() {
     const div = document.createElement("div");
     div.className = "gallery-item";
 
+    //Create spinner
+    const spinner = document.createElement("div");
+    spinner.className = "spinner";
+    div.appendChild(spinner);
+
+    //Create image
     const img = document.createElement("img");
     img.src = `galapagos/photos/${item.filename}`;
     img.alt = item.caption;
     img.loading = "lazy";
 
-    //fade in
+    //fade in image and remove spinner
     img.addEventListener("load", () => {
       img.classList.add("fade-in");
+      spinner.remove()
     });
 
     div.appendChild(img);
